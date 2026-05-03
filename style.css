@@ -1,0 +1,181 @@
+/* --- Global Styles --- */
+:root {
+    --black: #0a0a0a;
+    --hot-pink: #ff007f;
+    --soft-pink: #ff85c0;
+    --glow: 0 0 15px rgba(255, 0, 127, 0.8), 0 0 30px rgba(255, 0, 127, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--black);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* --- Glowing Background Effect --- */
+.glow-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 0, 127, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* --- Navigation --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--hot-pink);
+    text-shadow: var(--glow);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--hot-pink);
+    text-shadow: var(--glow);
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 6rem;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.pink-text {
+    color: var(--hot-pink);
+    text-shadow: var(--glow);
+}
+
+.white-text {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 4rem;
+}
+
+.subtitle {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.glow-button {
+    margin-top: 40px;
+    padding: 15px 40px;
+    border: 2px solid var(--hot-pink);
+    border-radius: 50px;
+    color: var(--hot-pink);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    box-shadow: var(--glow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.glow-button:hover {
+    background: var(--hot-pink);
+    color: white;
+    box-shadow: 0 0 40px var(--hot-pink);
+}
+
+/* --- Content Section --- */
+.about-section {
+    padding: 100px 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 60px;
+    border-radius: 20px;
+    border-left: 5px solid var(--hot-pink);
+    max-width: 700px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--soft-pink);
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+footer {
+    text-align: center;
+    padding: 50px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: #555;
+}
+
+/* --- Mobile Responsive --- */
+@media (max-width: 768px) {
+    h1 { font-size: 3rem; }
+    .white-text { font-size: 2rem; }
+    nav { flex-direction: column; gap: 20px; }
+}
